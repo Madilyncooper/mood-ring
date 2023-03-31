@@ -1,0 +1,15 @@
+header {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to bottom right, #90aa9e, #d2e7de);
+    border-radius: 80px;
+    color: white;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    font-size: 70px;
+}
+
+header .header-title {
+    color: white;
+}
