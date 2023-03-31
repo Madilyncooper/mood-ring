@@ -19,3 +19,14 @@ async function searchPhotos(query){
 };
 
 searchPhotos('red');
+
+const quoteText = document.querySelector(".quote"),
+authorName = document.querySelector(".author.name"),
+colorBtn = document.querySelector("button");
+
+function randomQuote(){
+    fetch("https://api-ninjas.com/api/quotes").then(res.json()).then(result =>{
+        console.log(result);
+
+    })
+}
