@@ -1,5 +1,6 @@
+
 header {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Open Sans', sans-serif;
     background-image: linear-gradient(to bottom right, #90aa9e, #d2e7de);
     border-radius: 80px;
     color: white;
@@ -13,3 +14,9 @@ header h1 {
 header .header-title {
     color: white;
 }
+
+.colorbtn {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    }
