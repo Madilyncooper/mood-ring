@@ -24,25 +24,31 @@
   #green:hover {
     background-color: green;
     color: white;
+    cursor: pointer;
   }
   #red:hover {
     background-color: red;
+    cursor: pointer;
     color: white;
   }
   #blue:hover {
     background-color: blue;
+    cursor: pointer;
     color: white;
   }
   #black:hover {
     background-color: black;
+    cursor: pointer;
     color: white;
   }
   #gray:hover {
     background-color: gray;
+    cursor: pointer;
     color: white;
   }
   #white:hover {
     background-color: white;
+    cursor: pointer;
     color: black;
   }
 
