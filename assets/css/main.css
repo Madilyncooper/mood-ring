@@ -4,46 +4,76 @@
   }
 
 .buttons {
-    transition-duration: 1s;
-    width: 450px;
-    height: 450px;
-    border-top: 30px solid #f00303;
-    border-right: 30px solid #1ead02;
-    border-bottom: 30px solid #023cf8;
-    border-left: 30px solid #da05da;
-    -webkit-border-radius: 300px;
-    -moz-border-radius: 300px;
-    border-radius: 300px
+    position: relative;
+    border: 5px solid black;
+    padding: 0;
+    margin: 1em auto;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    list-style: none;
+    overflow: hidden;
   }
   
 .buttons:hover {
     background-color: aqua;
   }
 
+  #green:hover {
+    background-color: green;
+    color: white;
+  }
+  #red:hover {
+    background-color: red;
+    color: white;
+  }
+  #blue:hover {
+    background-color: blue;
+    color: white;
+  }
+  #black:hover {
+    background-color: black;
+    color: white;
+  }
+  #gray:hover {
+    background-color: gray;
+    color: white;
+  }
+  #white:hover {
+    background-color: white;
+    color: black;
+  }
+
 #green, #red, #blue, #black, #gray, #white {
-    position: unset;
+    display: flex;
     border-radius: 50%;
-    padding: 14px 40px;
+    padding: 10px 30px;
     font-size: 24px;
-    display: block;
     overflow: hidden;
-    float: middle;
+    position: absolute;
+    align-content: safe;
 }
 li:first-child {
-    background-color: green;
+    transform: rotate(15deg);
+    border-right: 150px solid green;
   }
-  li:nth-child(2) {
-    background-color: red;
-  }
-  li:nth-child(3) {
-    background-color: blue;
-  }
-  li:nth-child(4) {
-    background-color: black;
-  }
-  li:nth-child(5) {
-    background-color: gray;
-  }
-  li:nth-child(6) { 
-    background-color: white;
-  }
+li:nth-child(2) {
+    transform: rotate(15deg);
+    border-right: 150px solid red;
+}
+li:nth-child(3) {
+    transform: rotate(15deg);
+    border-right: 150px solid blue;
+}
+li:nth-child(4) {
+    transform: rotate(15deg);
+    border-right: 150px solid black;
+}
+li:nth-child(5) {
+    transform: rotate(15deg);
+    border-right: 150px solid gray;
+}
+li:nth-child(6) {
+    transform: rotate(15deg);
+    border-right: 150px solid white;
+}
