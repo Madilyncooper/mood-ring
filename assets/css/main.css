@@ -1,4 +1,29 @@
+<<<<<<< HEAD
+
+header {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to bottom right, #90aa9e, #d2e7de);
+    border-radius: 80px;
+    color: white;
+}
+
+header h1 {
+    letter-spacing: 5px;
+    font-size: 70px;
+}
+
+header .header-title {
+    color: white;
+}
+
+.colorbtn {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    }
+=======
 .colorbtn {
 font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
 }
+>>>>>>> 9f8ee22cbfeeabcbb91c077772853c33f3484afb
