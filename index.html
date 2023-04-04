@@ -9,24 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
   </head>
   <body>
+  <div>
+      <header>
+      <h1 class="title is-1 m-5 p-5 has-text-centered has-text-black">
+        M<span class="header-title">oo</span>d Ring
+      </h1>
+    </header>
+    </div>
   <section class="section">
     <div class="container">
-      <h1 class="title">
-        Mood Ring
-      </h1>
     <div class="colorbtn">
       <h2 class="color">
         Pick A color
       </h2>
       <ul class="buttons">
-        <li><button onclick="alert('button1')">Green</button></li>
-        <li><button onclick="alert('button1')">Red</button></li>
-        <li><button onclick="alert('button1')">Blue</button></li>
-        <li><button onclick="alert('button1')">Black</button></li>
-        <li><button onclick="alert('button1')">Gray</button></li>
-        <li><button onclick="alert('button1')">White</button></li>
+        <li><button id="green" onclick="alert('button1')">Green</button></li>
+        <li><button id="red" onclick="alert('button1')">Red</button></li>
+        <li><button id="blue" onclick="alert('button1')">Blue</button></li>
+        <li><button id="black" onclick="alert('button1')">Black</button></li>
+        <li><button id="gray" onclick="alert('button1')">Gray</button></li>
+        <li><button id="white" onclick="alert('button1')">White</button></li>
       </ul>
     </div>
   </section>
