@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding-top: 0;
+  padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -9,6 +9,8 @@ body {
   background: black;
   padding-top: 3em;
 }
+
+/*HEADER STYLES*/
 
 header {
   margin: 0em 20em;
@@ -33,6 +35,8 @@ header .title {
   color: #ffa500;
 }
 
+/*BUTTON STYLES MOODRING*/
+
 .buttons {
   margin: 1em auto;
   width: 50em;
@@ -48,6 +52,8 @@ header .title {
   -moz-border-radius: 300px;
   border-radius: 300px
 }
+
+/*BUTTON HOVER STYLES MOODRING*/
 
 .buttons:hover {
   background-color: aqua;
@@ -90,6 +96,8 @@ header .title {
   overflow: hidden;
   float: middle;
 }
+
+/*BUTTON STYLES POSITIONING*/
 
 li:first-child {
   transform: rotate(25deg);
