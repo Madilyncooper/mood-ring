@@ -62,8 +62,14 @@ header .title {
   /*BUTTON HOVER STYLES MOODRING*/
 
 .color {
-  display: inline;
+  display:flex;
   justify-content: center;
+  color: white;
+  justify-content: center;
+}
+
+.recent{
+  color:white;
 }
 
 ul:hover {
