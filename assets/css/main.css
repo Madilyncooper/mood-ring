@@ -5,6 +5,38 @@
 
 }
 
+body {
+  background: black;
+  padding-top: 3em;
+}
+
+  /*HEADER STYLES*/
+
+header {
+  margin: 0em 20em;
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;
+  border: 8px solid #ffa500;
+  border-radius: 80px;
+  color: #ffa500;
+}
+
+header h1 {
+  letter-spacing: 5px;
+  font-size: 70px;
+  color: white;
+}
+
+header .header-title {
+  color: #ffa500;
+}
+
+header .title {
+  color: #ffa500;
+}
+
+/*BUTTON STYLES MOODRING*/
+
 .buttons {
   margin: 1em auto;
   width: 50em;
@@ -18,10 +50,12 @@
   border-left: 30px solid #da05da;
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
-  border-radius: 300px
+  border-radius: 300px;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+  /*BUTTON HOVER STYLES MOODRING*/
 
 .color {
   display: inline;
@@ -70,6 +104,8 @@ ul:hover {
   float: middle;
 }
 
+/*BUTTON STYLES POSITIONING*/
+
 li:first-child {
   transform: rotate(25deg);
   left: 80px;
@@ -96,21 +132,6 @@ li:nth-child(6) {
   position: relative;
 }
 
-header {
-    font-family: 'Open Sans', sans-serif;
-    background-image: linear-gradient(to bottom right, #90aa9e, #d2e7de);
-    border-radius: 80px;
-    color: white;
-}
-
-header h1 {
-    letter-spacing: 5px;
-    font-size: 70px;
-}
-
-header .header-title {
-    color: rgb(233, 24, 24);
-}
 
 .colorbtn {
     font-family: 'Open Sans', sans-serif;
