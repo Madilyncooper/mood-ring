@@ -2,6 +2,7 @@ var colorBtnEl = document.querySelector('.buttons');
 
 var memeApiKey =  'jzeomPx5iwUnwAU/a96sUQ==UdtVN88itkhPAA9i';
 var pexelsApiKey = 'w2sIrwpKk7Gw4JfF7ws129C25twSIzoVDSKvO0JLYw3ZhrxSTKIsdVXU';
+var photoArr = [];
 
 async function searchPhotos(query){
     const data=await fetch(`https://api.pexels.com/v1/search?query=${query}`, 
@@ -13,10 +14,12 @@ async function searchPhotos(query){
         },
     });
     const response=await data.json();
-    console.log(response);
+    // console.log(response.photos);
 
+    var photoList = response.photos;
 //    displayImages(response) 
    //Add in images
+photoArr.push(photoList);
 
 };
 
@@ -34,21 +37,27 @@ event.preventDefault();
 
 if (event.target.textContent === 'Red') {
     searchPhotos('red');
+   console.log(photoArr);
 }
 else if (event.target.textContent === 'Green') {
     searchPhotos('green');
+    
 }
 else if (event.target.textContent === 'Blue') {
     searchPhotos('blue');
+   
 }
 else if (event.target.textContent === 'Orange') {
     searchPhotos('orange');
+ 
 }
 else if (event.target.textContent === 'Pink') {
     searchPhotos('pink');
+ 
 }
 else if (event.target.textContent === 'Yellow') {
     searchPhotos('yellow');
+  
 }
 else {
     return;
