@@ -17,9 +17,11 @@ header {
   margin: 0em 20em;
   font-family: 'Open Sans', sans-serif;
   background-color: black;
-  border: 8px solid #ffa500;
+  border: 8px solid aqua;
   border-radius: 80px;
-  color: #ffa500;
+  color:aqua;
+  position: relative;
+  z-index: 1;
 }
 
 header h1 {
@@ -29,11 +31,11 @@ header h1 {
 }
 
 header .header-title {
-  color: #ffa500;
+  color:aqua;
 }
 
 header .title {
-  color: #ffa500;
+  color: aqua;
 }
 
 /*BUTTON STYLES MOODRING*/
