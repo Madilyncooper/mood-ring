@@ -10,8 +10,8 @@
   width: 50em;
   height: 50em;
   transition-duration: 1s;
-  width: 450px;
-  height: 450px;
+  width: 577px;
+  height: 290px;
   border-top: 30px solid #f00303;
   border-right: 30px solid #1ead02;
   border-bottom: 30px solid #023cf8;
@@ -19,9 +19,16 @@
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
   border-radius: 300px
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.buttons:hover {
+.color {
+  display: inline;
+  justify-content: center;
+}
+
+ul:hover {
   background-color: aqua;
 }
 #green:hover {
@@ -55,8 +62,8 @@
   color: black;
 }
 #green, #red, #blue, #black, #gray, #white {
-  border-radius: 50%;
-  padding: 15px 50px 15px;
+  border-radius: 75%;
+  padding: 10px 50px 15px;
   font-size: 15px;
   display: inline;
   overflow: hidden;
