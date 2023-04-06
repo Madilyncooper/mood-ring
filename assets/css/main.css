@@ -80,22 +80,22 @@ ul:hover {
   cursor: pointer;
   color: white;
 }
-#black:hover {
-  background-color: black;
+#orange:hover {
+  background-color: orange;
   cursor: pointer;
   color: white;
 }
-#gray:hover {
-  background-color: gray;
-  cursor: pointer;
-  color: white;
-}
-#white:hover {
-  background-color: white;
+#pink:hover {
+  background-color: pink;
   cursor: pointer;
   color: black;
 }
-#green, #red, #blue, #black, #gray, #white {
+#yellow:hover {
+  background-color: yellow;
+  cursor: pointer;
+  color: black;
+}
+#green, #red, #blue, #orange, #pink, #yellow {
   border-radius: 75%;
   padding: 10px 50px 15px;
   font-size: 15px;
