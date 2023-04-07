@@ -59,6 +59,7 @@ header .title {
   position: relative; z-index: 1;
 }
 
+
   /*BUTTON HOVER STYLES MOODRING*/
 
 .color {
@@ -115,6 +116,7 @@ ul:hover {
 }
 
 /*BUTTON STYLES POSITIONING*/
+
 
 li:first-child {
   transform: rotate(25deg);

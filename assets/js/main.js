@@ -1,12 +1,13 @@
 var colorBtnEl = document.querySelector('.buttons');
 var quoteEl = document.querySelector('.quote')
-var memeApiKey =  'jzeomPx5iwUnwAU/a96sUQ==UdtVN88itkhPAA9i';
+var memeApiKey = 'jzeomPx5iwUnwAU/a96sUQ==UdtVN88itkhPAA9i';
 var pexelsApiKey = 'w2sIrwpKk7Gw4JfF7ws129C25twSIzoVDSKvO0JLYw3ZhrxSTKIsdVXU';
 var photoArr = [];
 var quoteArr = [];
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
+
 const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?';
 let button1 = () => {
     fetch(url, {
@@ -25,112 +26,139 @@ let button1 = () => {
             }
             quoteArr.push(quoteObj)
         });
-    }
+}
 button1();
 
 
 
-async function searchPhotos(query){
-    const data=await fetch(`https://api.pexels.com/v1/search?query=${query}`, 
-    {
-        method: "GET",
-        headers: {
-            Accept: "application/json",
-            Authorization: pexelsApiKey,
-        },
-    });
-    const response=await data.json();
+async function searchPhotos(query) {
+    const data = await fetch(`https://api.pexels.com/v1/search?query=${query}`,
+        {
+            method: "GET",
+            headers: {
+                Accept: "application/json",
+                Authorization: pexelsApiKey,
+            },
+        });
+    const response = await data.json();
     // console.log(response.photos);
 
     var photoList = response.photos;
-//    displayImages(response) 
-   //Add in images
-photoArr.push(photoList);
+    //    displayImages(response) 
+    //Add in images
+    photoArr.push(photoList);
 
 };
 
 
 
-function colorBtnClick (event) {
+async function colorBtnClick(event) {
 
-event.preventDefault();
+    event.preventDefault();
 
-// console.log(event.target.textContent)
-// if (!event.target.matches('.color-buttons')) {
-//     return;
-// }
+    // console.log(event.target.textContent)
+    // if (!event.target.matches('.color-buttons')) {
+    //     return;
+    // }
 
-if (event.target.textContent === 'Red') {
-    searchPhotos('red');
-    document.querySelector('section').innerHTML = ''
-    var quo = document.createElement('h1')
-    quo.setAttribute('class','recent')
-    quo.textContent = JSON.stringify(quoteArr)
-    quoteEl.appendChild(quo)
-    console.log(quoteArr)
-    console.log(photoArr);
-}
-else if (event.target.textContent === 'Green') {
-    searchPhotos('green');
-    document.querySelector('section').innerHTML = ''
-    var quo = document.createElement('h1')
-    quo.setAttribute('class','recent')
-    quo.textContent = JSON.stringify(quoteArr)
-    quoteEl.appendChild(quo)
-    console.log(quoteArr)
-    console.log(photoArr);
-}
-else if (event.target.textContent === 'Blue') {
-    searchPhotos('blue');
-    document.querySelector('section').innerHTML = ''
-    var quo = document.createElement('h1')
-    quo.setAttribute('class','recent')
-    quo.textContent = JSON.stringify(quoteArr)
-    quoteEl.appendChild(quo)
-    console.log(quoteArr)
-    console.log(photoArr);
-}
-else if (event.target.textContent === 'Orange') {
-    searchPhotos('orange');
-    document.querySelector('section').innerHTML = ''
-    var quo = document.createElement('h1')
-    quo.setAttribute('class','recent')
-    quo.textContent = JSON.stringify(quoteArr)
-    quoteEl.appendChild(quo)
-    console.log(quoteArr)
-    console.log(photoArr);
-}
-else if (event.target.textContent === 'Pink') {
-    searchPhotos('pink');
-    document.querySelector('section').innerHTML = ''
-    var quo = document.createElement('h1')
-    quo.setAttribute('class','recent')
-    quo.textContent = JSON.stringify(quoteArr)
-    quoteEl.appendChild(quo)
-    console.log(quoteArr)
-    console.log(photoArr);
-}
-else if (event.target.textContent === 'Yellow') {
-    searchPhotos('yellow');
-    document.querySelector('section').innerHTML = ''
-    var quo = document.createElement('h1')
-    quo.setAttribute('class','recent')
-    quo.textContent = JSON.stringify(quoteArr)
-    quoteEl.appendChild(quo)
-    console.log(quoteArr)
-    console.log(photoArr);
-}
-else {
-    return;
-}
+    if (event.target.textContent === 'Red') {
+        await searchPhotos('red');
+        grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
+    }
+    else if (event.target.textContent === 'Green') {
+        await searchPhotos('green');
+        grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
+    }
+    else if (event.target.textContent === 'Blue') {
+        await searchPhotos('blue');
+        grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
+    }
+    else if (event.target.textContent === 'Orange') {
+        await searchPhotos('orange');
+        grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
+    }
+    else if (event.target.textContent === 'Pink') {
+        await searchPhotos('pink');
+        grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
+    }
+    else if (event.target.textContent === 'Yellow') {
+        await searchPhotos('yellow');
+        grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
+    }
+    else {
+        return;
+    }
 }
 
+function grabPicture (){
+document.querySelector('section').innerHTML = ''
+var quo = document.createElement('h3')
+quo.setAttribute('class', 'recent')
+quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author
+quoteEl.appendChild(quo)
 
+for(var i = 0; i < photoArr[0].length; i++){
+   
 
+    var altTag = photoArr[0][i].alt;
+    var src = photoArr[0][i].src.original;
+
+    var imgEl = document.createElement('img');
+    imgEl.setAttribute('src', src);
+    imgEl.setAttribute('alt', altTag);
+    quoteEl.appendChild(imgEl)
+}
+}
 // function renderPhoto () {
 //     var imageEl = document.createAttribute('img');
 
 // }
 
 colorBtnEl.addEventListener('click', colorBtnClick);
+
+function refreshPage(){
+    window.location.reload();
+} 
 
