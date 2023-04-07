@@ -1,10 +1,9 @@
 var colorBtnEl = document.querySelector('.buttons');
-
+var quoteEl = document.querySelector('.quote')
 var memeApiKey =  'jzeomPx5iwUnwAU/a96sUQ==UdtVN88itkhPAA9i';
 var pexelsApiKey = 'w2sIrwpKk7Gw4JfF7ws129C25twSIzoVDSKvO0JLYw3ZhrxSTKIsdVXU';
 var photoArr = [];
 var quoteArr = [];
-
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
@@ -63,31 +62,61 @@ event.preventDefault();
 
 if (event.target.textContent === 'Red') {
     searchPhotos('red');
+    document.querySelector('section').innerHTML = ''
+    var quo = document.createElement('h1')
+    quo.setAttribute('class','recent')
+    quo.textContent = JSON.stringify(quoteArr)
+    quoteEl.appendChild(quo)
     console.log(quoteArr)
-   console.log(photoArr);
+    console.log(photoArr);
 }
 else if (event.target.textContent === 'Green') {
     searchPhotos('green');
+    document.querySelector('section').innerHTML = ''
+    var quo = document.createElement('h1')
+    quo.setAttribute('class','recent')
+    quo.textContent = JSON.stringify(quoteArr)
+    quoteEl.appendChild(quo)
     console.log(quoteArr)
     console.log(photoArr);
 }
 else if (event.target.textContent === 'Blue') {
     searchPhotos('blue');
+    document.querySelector('section').innerHTML = ''
+    var quo = document.createElement('h1')
+    quo.setAttribute('class','recent')
+    quo.textContent = JSON.stringify(quoteArr)
+    quoteEl.appendChild(quo)
     console.log(quoteArr)
     console.log(photoArr);
 }
 else if (event.target.textContent === 'Orange') {
     searchPhotos('orange');
+    document.querySelector('section').innerHTML = ''
+    var quo = document.createElement('h1')
+    quo.setAttribute('class','recent')
+    quo.textContent = JSON.stringify(quoteArr)
+    quoteEl.appendChild(quo)
     console.log(quoteArr)
     console.log(photoArr);
 }
 else if (event.target.textContent === 'Pink') {
     searchPhotos('pink');
+    document.querySelector('section').innerHTML = ''
+    var quo = document.createElement('h1')
+    quo.setAttribute('class','recent')
+    quo.textContent = JSON.stringify(quoteArr)
+    quoteEl.appendChild(quo)
     console.log(quoteArr)
     console.log(photoArr);
 }
 else if (event.target.textContent === 'Yellow') {
     searchPhotos('yellow');
+    document.querySelector('section').innerHTML = ''
+    var quo = document.createElement('h1')
+    quo.setAttribute('class','recent')
+    quo.textContent = JSON.stringify(quoteArr)
+    quoteEl.appendChild(quo)
     console.log(quoteArr)
     console.log(photoArr);
 }
@@ -104,3 +133,4 @@ else {
 // }
 
 colorBtnEl.addEventListener('click', colorBtnClick);
+
