@@ -7,6 +7,7 @@ var quoteArr = [];
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
+
 const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?';
 let button1 = () => {
     fetch(url, {
@@ -63,26 +64,68 @@ async function colorBtnClick(event) {
     if (event.target.textContent === 'Red') {
         await searchPhotos('red');
         grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
     }
     else if (event.target.textContent === 'Green') {
         await searchPhotos('green');
         grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
     }
     else if (event.target.textContent === 'Blue') {
         await searchPhotos('blue');
         grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
     }
     else if (event.target.textContent === 'Orange') {
         await searchPhotos('orange');
         grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
     }
     else if (event.target.textContent === 'Pink') {
         await searchPhotos('pink');
         grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
     }
     else if (event.target.textContent === 'Yellow') {
         await searchPhotos('yellow');
         grabPicture()
+        var refresh = document.createElement('button');
+        refresh.textContent = 'Refresh';
+        refresh.classList.add('button', 'is-primary');
+        refresh.addEventListener('click', refreshPage);
+
+        quoteEl.appendChild(refresh);
+
     }
     else {
         return;
@@ -114,4 +157,8 @@ for(var i = 0; i < photoArr[0].length; i++){
 // }
 
 colorBtnEl.addEventListener('click', colorBtnClick);
+
+function refreshPage(){
+    window.location.reload();
+} 
 
