@@ -159,6 +159,7 @@ li:nth-child(6) {
 	align-items: center;
 	min-height: 100vh;
 	background: #000000;
+  background-size: cover;
 }
 .container
 {position: relative;
@@ -172,6 +173,8 @@ li:nth-child(6) {
 	display: flex;
 	position: absolute;z-index: 0;
 	padding: 0 20px;
+  width: 100%;
+  height: 100vh;
 }
 
 .particles span {
@@ -185,7 +188,7 @@ li:nth-child(6) {
 	-100px 0 #e40606c5,
 	100px 0 #d27307bf;
 	margin: 0 4px;
-	border-radius: 40%;
+	border-radius: 60%;
 	animation: animate 15s ease infinite;
 	animation-duration: calc(400s / var(--i));
 }
@@ -200,11 +203,11 @@ li:nth-child(6) {
 {
   35% 
 	{
-		transform:translateY(100vh) scale(0) rotate(0deg);
+		transform:translateY(100vh) scale(1) rotate(0deg);
 	}
 	20% 
 	{
-		transform:translateY(100vh) scale(1) rotate(0deg);
+		transform:translateY(100vh) scale(3) rotate(0deg);
 	}
 	100% 
 	{
