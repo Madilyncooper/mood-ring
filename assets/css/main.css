@@ -14,6 +14,10 @@ body {
   /*HEADER STYLES*/
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin: 0em 20em;
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(0, 0, 0);
@@ -23,6 +27,7 @@ header {
   position: relative;
   z-index: 1;
 }
+
 
 header h1 {
   letter-spacing: 5px;
@@ -37,6 +42,7 @@ header .header-title {
 header .title {
   color: aqua;
 }
+
 
 /*BUTTON STYLES MOODRING*/
 
@@ -71,6 +77,9 @@ header .title {
 
 .recent{
   color:white;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 2em 6em;
 }
 
 ul:hover {
@@ -217,4 +226,34 @@ li:nth-child(6) {
 	{
 		transform: translateY(-50vh) scale(0.5) rotate(360deg);
 	}
+}
+
+
+.button {
+  margin: 2% 44% 2% 44%;
+  padding: 2% 5% 2% 5%;
+  background-color: aqua;
+  color: white;
+  border-radius: 2em;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    margin: 0em 5em;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    margin: 0em 2em;
+  }
+
+  .recent {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em 3em;
+}
+
 }

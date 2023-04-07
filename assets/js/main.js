@@ -66,7 +66,7 @@ async function colorBtnClick(event) {
         grabPicture()
         var refresh = document.createElement('button');
         refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
+        refresh.classList.add('button');
         refresh.addEventListener('click', refreshPage);
 
         quoteEl.appendChild(refresh);
@@ -77,7 +77,7 @@ async function colorBtnClick(event) {
         grabPicture()
         var refresh = document.createElement('button');
         refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
+        refresh.classList.add('button');
         refresh.addEventListener('click', refreshPage);
 
         quoteEl.appendChild(refresh);
@@ -88,7 +88,7 @@ async function colorBtnClick(event) {
         grabPicture()
         var refresh = document.createElement('button');
         refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
+        refresh.classList.add('button');
         refresh.addEventListener('click', refreshPage);
 
         quoteEl.appendChild(refresh);
@@ -99,7 +99,7 @@ async function colorBtnClick(event) {
         grabPicture()
         var refresh = document.createElement('button');
         refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
+        refresh.classList.add('button');
         refresh.addEventListener('click', refreshPage);
 
         quoteEl.appendChild(refresh);
@@ -110,7 +110,7 @@ async function colorBtnClick(event) {
         grabPicture()
         var refresh = document.createElement('button');
         refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
+        refresh.classList.add('button');
         refresh.addEventListener('click', refreshPage);
 
         quoteEl.appendChild(refresh);
@@ -121,7 +121,7 @@ async function colorBtnClick(event) {
         grabPicture()
         var refresh = document.createElement('button');
         refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
+        refresh.classList.add('button');
         refresh.addEventListener('click', refreshPage);
 
         quoteEl.appendChild(refresh);
