@@ -7,6 +7,7 @@ var quoteArr = [];
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
+
 const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?';
 let button1 = () => {
     fetch(url, {
@@ -134,3 +135,6 @@ else {
 
 colorBtnEl.addEventListener('click', colorBtnClick);
 
+function refreshPage(){
+    window.location.reload();
+} 
