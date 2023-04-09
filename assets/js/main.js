@@ -1,5 +1,6 @@
 var colorBtnEl = document.querySelector('.buttons');
 var quoteEl = document.querySelector('.quote')
+var colorEL = document.querySelector('.color')
 var memeApiKey = 'jzeomPx5iwUnwAU/a96sUQ==UdtVN88itkhPAA9i';
 var pexelsApiKey = 'w2sIrwpKk7Gw4JfF7ws129C25twSIzoVDSKvO0JLYw3ZhrxSTKIsdVXU';
 var photoArr = [];
@@ -19,7 +20,6 @@ let button1 = () => {
     })
         .then((data) => data.json())
         .then((item) => {
-            console.log(item[0]);
             var quoteObj = {
                 quote: item[0].quote,
                 author: item[0].author,
@@ -64,68 +64,26 @@ async function colorBtnClick(event) {
     if (event.target.textContent === 'Red') {
         await searchPhotos('red');
         grabPicture()
-        var refresh = document.createElement('button');
-        refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
-        refresh.addEventListener('click', refreshPage);
-
-        quoteEl.appendChild(refresh);
-
     }
     else if (event.target.textContent === 'Green') {
         await searchPhotos('green');
         grabPicture()
-        var refresh = document.createElement('button');
-        refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
-        refresh.addEventListener('click', refreshPage);
-
-        quoteEl.appendChild(refresh);
-
     }
     else if (event.target.textContent === 'Blue') {
         await searchPhotos('blue');
         grabPicture()
-        var refresh = document.createElement('button');
-        refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
-        refresh.addEventListener('click', refreshPage);
-
-        quoteEl.appendChild(refresh);
-
     }
     else if (event.target.textContent === 'Orange') {
         await searchPhotos('orange');
         grabPicture()
-        var refresh = document.createElement('button');
-        refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
-        refresh.addEventListener('click', refreshPage);
-
-        quoteEl.appendChild(refresh);
-
     }
     else if (event.target.textContent === 'Pink') {
         await searchPhotos('pink');
         grabPicture()
-        var refresh = document.createElement('button');
-        refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
-        refresh.addEventListener('click', refreshPage);
-
-        quoteEl.appendChild(refresh);
-
     }
     else if (event.target.textContent === 'Yellow') {
         await searchPhotos('yellow');
         grabPicture()
-        var refresh = document.createElement('button');
-        refresh.textContent = 'Refresh';
-        refresh.classList.add('button', 'is-primary');
-        refresh.addEventListener('click', refreshPage);
-
-        quoteEl.appendChild(refresh);
-
     }
     else {
         return;
@@ -138,27 +96,27 @@ var quo = document.createElement('h3')
 quo.setAttribute('class', 'recent')
 quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author
 quoteEl.appendChild(quo)
-
-for(var i = 0; i < photoArr[0].length; i++){
    
-
-    var altTag = photoArr[0][i].alt;
-    var src = photoArr[0][i].src.original;
+    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)]
 
     var imgEl = document.createElement('img');
-    imgEl.setAttribute('src', src);
-    imgEl.setAttribute('alt', altTag);
+    imgEl.setAttribute('src', rand.src.original);
+    imgEl.setAttribute('alt', rand.alt);
+    imgEl.setAttribute('class', 'size')
     quoteEl.appendChild(imgEl)
-}
-}
-// function renderPhoto () {
-//     var imageEl = document.createAttribute('img');
 
-// }
+    var refresh = document.createElement('button');
+    refresh.textContent = 'Refresh';
+    refresh.classList.add('button', 'is-primary');
+    refresh.addEventListener('click', refreshPage);
 
-colorBtnEl.addEventListener('click', colorBtnClick);
+    quoteEl.appendChild(refresh);
+
+}
+
+
+colorBtnEl.addEventListener('click', colorBtnClick)
 
 function refreshPage(){
     window.location.reload();
 } 
-
