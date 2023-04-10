@@ -279,10 +279,15 @@ body {
 
 /* "Back" button styling*/
 #back-button {
-  background-color: white;
+  background-color: inherit;
   font-weight: bold;
-  letter-spacing: 5px;
-  color: black;
+  font-size: 20px;
+  letter-spacing: 7px;
+  color:#485fc7;
+}
+
+#back-button:hover {
+  color: white;
 }
 
 /* My Moods footer */
