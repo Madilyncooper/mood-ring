@@ -194,13 +194,6 @@ li:nth-child(6) {
 
 @import "node_modules/bulma/sass/utilities/initial-variables";
 
-/* Rendered quote text */
-.recent {
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: -40px;
-}
 
 /* background*/
 body {
@@ -276,6 +269,22 @@ body {
   margin-top: 75px;
 }
 
+/* Rendered quote text */
+.recent {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -40px;
+}
+
+/* Rendered author name */
+#author-name {
+font-weight: bold;
+margin-top: 10px;
+font-size: 15px;
+color:#485fc7;
+letter-spacing: 5px;
+}
 
 /* "Back" button styling*/
 #back-button {

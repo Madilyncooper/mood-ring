@@ -116,20 +116,26 @@ async function colorBtnClick(event) {
 }
 
 function grabPicture() {
+
     document.querySelector('section').innerHTML = '';
     document.querySelector('footer').innerHTML = '';
+
+
     var quo = document.createElement('h3');
     quo.setAttribute('class', 'recent');
-    quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author;
-    quoteEl.appendChild(quo);
-
+    quo.textContent = quoteArr[0].quote;
+   
+    var authorNameEl = document.createElement('p');
+    authorNameEl.textContent = `By ${quoteArr[0].author}`;
+    authorNameEl.setAttribute('id', 'author-name');
+    
     var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)];
 
     var imgEl = document.createElement('img');
     imgEl.setAttribute('src', rand.src.original);
     imgEl.setAttribute('alt', rand.alt);
     imgEl.setAttribute('class', 'size');
-    quoteEl.appendChild(imgEl);
+    
 
     var refresh = document.createElement('button');
     refresh.textContent = 'Back';
@@ -137,6 +143,9 @@ function grabPicture() {
     refresh.classList.add('button', 'is-primary');
     refresh.addEventListener('click', refreshPage);
 
+    quo.appendChild(authorNameEl);
+    quo.appendChild(imgEl);
+    quoteEl.appendChild(quo);
     quoteEl.appendChild(refresh);
 
 }
