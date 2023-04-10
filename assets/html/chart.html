@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html class="has-background-black">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mood Ring/Chart</title>
+  <title>Mood Chart</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +22,12 @@
   </div>
 
   <h2>MOOD TRACKER</h2>
-  
   <div>
-    <canvas id="myChart" style="width:100%; max-width:700px"></canvas> 
+    <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
   </div>
+  <button onclick="document.location='../../index.html'" class="button back-button">Back</button>
 
   <!--background-->
-
   <div class="container has-background-black">
     <div class="particles">
       <span style="--i:11"></span>
@@ -74,7 +72,6 @@
       <span style="--i:28"></span>
     </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="../js/chart.js"></script>

@@ -31,9 +31,8 @@ let button1 = () => {
             quoteArr.push(quoteObj)
         });
 }
+
 button1();
-
-
 
 async function searchPhotos(query) {
     const data = await fetch(`https://api.pexels.com/v1/search?query=${query}`,
@@ -49,8 +48,6 @@ async function searchPhotos(query) {
     photoArr.push(photoList);
 
 };
-
-
 
 async function colorBtnClick(event) {
     event.preventDefault();
@@ -101,8 +98,6 @@ async function colorBtnClick(event) {
     else {
         return;
     }
-
-
 }
 
 function grabPicture() {
@@ -129,8 +124,7 @@ function grabPicture() {
 
     var refresh = document.createElement('button');
     refresh.textContent = 'Back';
-    refresh.setAttribute('id', 'back-button')
-    refresh.classList.add('button', 'is-primary');
+    refresh.classList.add('button', 'back-button');
     refresh.addEventListener('click', refreshPage);
 
     quo.appendChild(authorNameEl);
