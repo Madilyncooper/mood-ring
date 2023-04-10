@@ -139,17 +139,9 @@ function grabPicture() {
     quoteEl.appendChild(refresh);
 }
 
-// function moodChart (event) {
-// event.preventDefault();
-
-// }
-
-// moodTrackerEl.addEventListener('click', moodChart);
-
 colorBtnEl.addEventListener('click', colorBtnClick);
 
 function refreshPage() {
     window.location.reload();
 } 
-
 
