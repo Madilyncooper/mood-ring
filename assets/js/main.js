@@ -117,6 +117,7 @@ async function colorBtnClick(event) {
 
 function grabPicture() {
     document.querySelector('section').innerHTML = '';
+    document.querySelector('footer').innerHTML = '';
     var quo = document.createElement('h3');
     quo.setAttribute('class', 'recent');
     quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author;

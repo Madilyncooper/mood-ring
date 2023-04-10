@@ -1,5 +1,5 @@
 * {
-  margin: 12px;
+  margin: 0;
   padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
@@ -10,7 +10,7 @@ body {
   padding-top: 3em;
 }
 
-.quote{
+.quote {
   justify-content: center;
   position: relative;
   text-align: center;
@@ -26,21 +26,18 @@ body {
 }
 
 
-.is-primary{
+.is-primary {
   display: block;
 
 }
 
 
-  /*HEADER STYLES*/
+/*HEADER STYLES*/
 
 header {
   margin: 0em 20em;
   font-family: 'Open Sans', sans-serif;
-  /* background-color: rgb(0, 0, 0); */
-  /* border: 8px solid aqua;
-  border-radius: 80px; */
-  color:aqua;
+  color: aqua;
   position: relative;
   z-index: 1;
   margin-bottom: 50px;
@@ -50,13 +47,13 @@ header {
 
 
 header h1 {
-  letter-spacing: 20px;
+  letter-spacing: 25px;
   color: white;
 
 }
 
 header .header-title {
-  color:orange;
+  color: orange;
 }
 
 header .header-n {
@@ -66,32 +63,13 @@ header .header-n {
 header .header-o-two {
   color: #023cf8;
 }
+
 header .title {
   color: aqua;
   font-size: 83px;
 }
 
 /*BUTTON STYLES MOODRING*/
-
-/* .buttons {
-  margin: 1em auto;
-  width: 50em;
-  height: 50em;
-  transition-duration: 1s;
-  width: 577px;
-  height: 290px;
-  border-top: 30px solid orange;
-  border-right: 30px solid #1ead02;
-  border-bottom: 30px solid #e1064b;
-  border-left: 30px solid #023cf8;
-  -webkit-border-radius: 300px;
-  -moz-border-radius: 300px;
-  border-radius: 300px;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative; z-index: 1;
-} */
-
 .buttons {
   margin: 1em auto;
   height: 569px;
@@ -106,72 +84,64 @@ header .title {
   border-radius: 300px;
   flex-wrap: wrap;
   justify-content: center;
-  position: relative; z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
-
-
-
-  /*BUTTON HOVER STYLES MOODRING*/
-
+/*BUTTON HOVER STYLES MOODRING*/
 .color {
-  display:flex;
+  display: flex;
   justify-content: center;
   color: white;
   justify-content: center;
-}
-
-.recent{
-  color:white;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: -40px;
 }
 
 ul:hover {
   background-color: aqua;
 }
+
 #green:hover {
   background-color: #1ead02;
   color: white;
   cursor: pointer;
 }
+
 #red:hover {
   background-color: rgb(217, 0, 0);
   cursor: pointer;
   color: white;
 }
+
 #blue:hover {
   background-color: #023cf8;
   cursor: pointer;
   color: white;
 }
+
 #orange:hover {
   background-color: orange;
   cursor: pointer;
   color: white;
 }
+
 #pink:hover {
   background-color: #e1064b;
   cursor: pointer;
   color: white;
 }
+
 #yellow:hover {
   background-color: rgb(221, 225, 0);
   cursor: pointer;
   color: white;
 }
-/* #green, #red, #blue, #orange, #pink, #yellow {
-  border-radius: 75%;
-  padding: 10px 50px 15px;
-  font-size: 15px;
-  font-weight: bold;
-  display: inline;
-  overflow: hidden;
-  float: middle;
-} */
 
-#green, #red, #blue, #orange, #pink, #yellow {
+#green,
+#red,
+#blue,
+#orange,
+#pink,
+#yellow {
   border-radius: 75%;
   padding: 30px 20px 30px;
   font-size: 15px;
@@ -185,123 +155,151 @@ ul:hover {
 }
 
 /*BUTTON STYLES POSITIONING*/
-
 li:first-child {
   transform: rotate(25deg);
   left: 80px;
   top: 2px;
 }
+
 li:nth-child(2) {
   transform: rotate(25deg);
   position: relative;
 }
+
 li:nth-child(3) {
   transform: rotate(25deg);
   position: relative;
 }
+
 li:nth-child(4) {
   transform: rotate(25deg);
   position: relative;
 }
+
 li:nth-child(5) {
   transform: rotate(25deg);
   position: relative;
 }
-li:nth-child(6) { 
+
+li:nth-child(6) {
   transform: rotate(25deg);
   position: relative;
 }
 
-
 .colorbtn {
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    }
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
 
 @import "node_modules/bulma/sass/utilities/initial-variables";
 
-
-
+/* Rendered quote text */
+.recent {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -40px;
+}
 
 /* background*/
-
- body {
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #1d1b1ba6;
+body {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1d1b1ba6;
   background-size: cover;
 }
-.container
-{position: relative;
-	width: 100%;
-	height: 0vh;
-	
-	
-	
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 0vh;
 }
+
 .particles {
-	display: flex;
-	position: absolute;z-index: 0;
-	padding: 0 20px;
+  display: flex;
+  position: absolute;
+  z-index: 0;
+  padding: 0 20px;
   width: 100%;
   height: 100vh;
 }
 
 .particles span {
-	position: relative; z-index: 0;
-	bottom: 30px;
-	min-width: 30px;
-	height: 30px;
-	background: #1515cd;
-	box-shadow: 0 0 0 10px #e1064b,
-	0 0 50px #2bd2f7,
-	-100px 0 #e40606c5,
-	100px 0 #d27307bf;
-	margin: 0 4px;
-	border-radius: 60%;
-	animation: animate 15s ease infinite;
-	animation-duration: calc(400s / var(--i));
-}
-.particles span:nth-child(even) {
-	background: #11a6f0;
-	box-shadow: 0 0 0 10px #d27307bf,
-	0 0 50px #d7054f,
-	-100px 0 #0cbde1f1,
-	100px 0 #2d3eff99;
-}
-@keyframes animate 
-{
-  35% 
-	{
-		transform:translateY(100vh) scale(1) rotate(0deg);
-	}
-	20% 
-	{
-		transform:translateY(100vh) scale(3) rotate(0deg);
-	}
-	100% 
-	{
-		transform: translateY(-50vh) scale(0.5) rotate(360deg);
-	}
+  position: relative;
+  z-index: 0;
+  bottom: 30px;
+  min-width: 30px;
+  height: 30px;
+  background: #1515cd;
+  box-shadow: 0 0 0 10px #e1064b,
+    0 0 50px #2bd2f7,
+    -100px 0 #e40606c5,
+    100px 0 #d27307bf;
+  margin: 0 4px;
+  border-radius: 60%;
+  animation: animate 15s ease infinite;
+  animation-duration: calc(400s / var(--i));
 }
 
-/* "How are you feeling today?" prompt animation */
-#user-prompt{
-  color:white; 
+.particles span:nth-child(even) {
+  background: #11a6f0;
+  box-shadow: 0 0 0 10px #d27307bf,
+    0 0 50px #d7054f,
+    -100px 0 #0cbde1f1,
+    100px 0 #2d3eff99;
+}
+
+@keyframes animate {
+  35% {
+    transform: translateY(100vh) scale(1) rotate(0deg);
+  }
+
+  20% {
+    transform: translateY(100vh) scale(3) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-50vh) scale(0.5) rotate(360deg);
+  }
+}
+
+/* "How are you feeling today?" text*/
+#user-prompt {
+  color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 27px;
   font-weight: bold;
   word-spacing: 5px;
   letter-spacing: 5px;
+  margin-top: 75px;
 }
 
 
 /* "Back" button styling*/
 #back-button {
-  background-color: aqua;
+  background-color: white;
   font-weight: bold;
   letter-spacing: 5px;
   color: black;
+}
+
+/* My Moods footer */
+.my-moods {
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 5px;
+}
+
+footer {
+  margin-top: 800px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+.my-moods:hover {
+  text-decoration: none;
+  cursor: -moz-grab;
+  color: white;
 }
