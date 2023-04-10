@@ -8,6 +8,13 @@ var quoteArr = [];
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
+var headerEl = document.querySelector('h1');
+var divHeaderEl = document.querySelector('div');
+
+
+var colorHistory = JSON.parse(localStorage.getItem('Color')) || [];
+
+
 
 const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?category=funny';
 let button1 = () => {
@@ -50,16 +57,14 @@ async function searchPhotos(query) {
 
 
 async function colorBtnClick(event) {
-
     event.preventDefault();
 
     var colorHistory = JSON.parse(localStorage.getItem('Color')) || [];
 
-   
-
     if (event.target.textContent === 'Red') {
         await searchPhotos('red');
         grabPicture()
+
         if (!colorHistory.includes(event.target.textContent)) {
             colorHistory.push(event.target.textContent);
             localStorage.setItem('Color', JSON.stringify(colorHistory));
@@ -110,20 +115,20 @@ async function colorBtnClick(event) {
     }
 }
 
-function grabPicture (){
-document.querySelector('section').innerHTML = ''
-var quo = document.createElement('h3')
-quo.setAttribute('class', 'recent')
-quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author
-quoteEl.appendChild(quo)
-   
-    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)]
+function grabPicture() {
+    document.querySelector('section').innerHTML = '';
+    var quo = document.createElement('h3');
+    quo.setAttribute('class', 'recent');
+    quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author;
+    quoteEl.appendChild(quo);
+
+    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)];
 
     var imgEl = document.createElement('img');
     imgEl.setAttribute('src', rand.src.original);
     imgEl.setAttribute('alt', rand.alt);
-    imgEl.setAttribute('class', 'size')
-    quoteEl.appendChild(imgEl)
+    imgEl.setAttribute('class', 'size');
+    quoteEl.appendChild(imgEl);
 
     var refresh = document.createElement('button');
     refresh.textContent = 'Refresh';
@@ -137,6 +142,6 @@ quoteEl.appendChild(quo)
 
 colorBtnEl.addEventListener('click', colorBtnClick)
 
-function refreshPage(){
+function refreshPage() {
     window.location.reload();
 } 

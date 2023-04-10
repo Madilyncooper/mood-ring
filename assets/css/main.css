@@ -14,11 +14,15 @@ body {
   justify-content: center;
   position: relative;
   text-align: center;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .size {
-  height: 700px;
-  width: 1000px;
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  margin-top: 10px;
 }
 
 
@@ -33,18 +37,20 @@ body {
 header {
   margin: 0em 20em;
   font-family: 'Open Sans', sans-serif;
-  background-color: rgb(0, 0, 0);
-  border: 8px solid aqua;
-  border-radius: 80px;
+  /* background-color: rgb(0, 0, 0); */
+  /* border: 8px solid aqua;
+  border-radius: 80px; */
   color:aqua;
   position: relative;
   z-index: 1;
+  margin-bottom: 50px;
+  display: inline;
 }
 
 header h1 {
-  letter-spacing: 5px;
-  font-size: 70px;
+  letter-spacing: 20px;
   color: white;
+
 }
 
 header .header-title {
@@ -53,6 +59,7 @@ header .header-title {
 
 header .title {
   color: aqua;
+  font-size: 83px;
 }
 
 /*BUTTON STYLES MOODRING*/
@@ -89,6 +96,7 @@ header .title {
 .recent{
   color:white;
   font-weight: bold;
+  font-size: 20px;
 }
 
 ul:hover {
@@ -243,4 +251,6 @@ li:nth-child(6) {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: bold;
+  word-spacing: 5px;
+  letter-spacing: 5px;
 }
