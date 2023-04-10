@@ -299,12 +299,16 @@ letter-spacing: 5px;
   color: white;
 }
 
-/* My Moods footer */
+/* My Moods footer button */
 .my-moods {
   font-weight: bold;
   position: relative;
   z-index: 1;
   letter-spacing: 5px;
+  background-color: inherit;
+  color: #485fc7;
+  border: none;
+  font-size: 27px;
 }
 
 footer {
@@ -314,6 +318,6 @@ footer {
 }
 .my-moods:hover {
   text-decoration: none;
-  cursor: -moz-grab;
+  cursor: grab;
   color: white;
 }

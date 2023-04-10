@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mood Ring</title>
+  <title>Mood Ring/Chart</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,34 +15,12 @@
 
 <body class="has-background-black">
   <div id="header">
-    <header> <!--Header styling Bulma and CSS-->
+    <header>
       <h1 class="title m-5 p-5 has-text-centered has-text-orange">
         M<span class="header-title">o</span><span class="header-o-two">o</span>d Ri<span class="header-n">n</span>g
       </h1>
     </header>
   </div>
-  <section class="section">
-    <div class="container">
-      <div class="colorbtn">
-        <h2 id="user-prompt" class="color">
-          How are you feeling today...
-        </h2>
-        <ul class="buttons">
-          <li><button id="green">Green</button></li>
-          <li><button id="red">Red</button></li>
-          <li><button id="blue">Blue</button></li>
-          <li><button id="orange">Orange</button></li>
-          <li><button id="pink">Pink</button></li>
-          <li><button id="yellow">Yellow</button></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <div class="quote">
-  </div>
-
-
-
 
   <!--background-->
 
@@ -91,14 +69,8 @@
     </div>
   </div>
 
-  <footer>
-    <button onclick="document.location='default.asp'" class="my-moods content is-large">Mood Tracker</button>
-  </footer>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 
