@@ -123,14 +123,18 @@ function grabPicture() {
 
     var quo = document.createElement('h3');
     quo.setAttribute('class', 'recent');
-    quo.textContent = quoteArr[0].quote;
+    // quo.textContent = quoteArr[0].quote;
    
     var authorNameEl = document.createElement('p');
-    authorNameEl.textContent = `By ${quoteArr[0].author}`;
+    // authorNameEl.textContent = `By ${quoteArr[0].author}`;
     authorNameEl.setAttribute('id', 'author-name');
     
-    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)];
-
+    for (var i = 0; i < photoArr.length; i++) {
+        var rand = photoArr[i][Math.floor(Math.random() * photoArr[i].length)];
+        quo.textContent = quoteArr[i].quote;
+        authorNameEl.textContent = `By ${quoteArr[i].author}`;
+    }
+   
     var imgEl = document.createElement('img');
     imgEl.setAttribute('src', rand.src.original);
     imgEl.setAttribute('alt', rand.alt);
