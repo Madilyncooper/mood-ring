@@ -119,7 +119,7 @@ ul:hover {
 }
 
 #orange:hover {
-  background-color: orange;
+  background-color: #ffa500;
   cursor: pointer;
   color: white;
 }

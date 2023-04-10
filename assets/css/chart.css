@@ -38,6 +38,21 @@ header {
     font-size: 83px;
   }
 
+  /* Mood Tracker h2 */
+
+  h2 {
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 7px;
+    background-color: inherit;
+    color: #485fc7;
+    border: none;
+    font-size: 27px;
+    margin-left: 38%;
+    margin-bottom: 50px;
+  }
+
   /* background*/
 body {
     justify-content: center;
@@ -99,4 +114,10 @@ body {
     100% {
       transform: translateY(-50vh) scale(0.5) rotate(360deg);
     }
+  }
+
+  /* Chart */
+
+  #myChart {
+    margin-left: 23%;
   }
