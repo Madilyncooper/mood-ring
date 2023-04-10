@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html class="has-background-black">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mood Ring</title>
+  <title>Mood Chart</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="../css/chart.css">
 </head>
 
 <body class="has-background-black">
@@ -21,25 +20,13 @@
       </h1>
     </header>
   </div>
-  <section class="section">
-    <div class="container">
-      <div class="colorbtn">
-        <h2 id="user-prompt" class="color">
-          How are you feeling today...
-        </h2>
-        <ul class="buttons">
-          <li><button id="green">Green</button></li>
-          <li><button id="red">Red</button></li>
-          <li><button id="blue">Blue</button></li>
-          <li><button id="orange">Orange</button></li>
-          <li><button id="pink">Pink</button></li>
-          <li><button id="yellow">Yellow</button></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <div class="quote">
+
+  <h2>MOOD TRACKER</h2>
+  <div>
+    <canvas id="myChart" style="width:100%; max-width:700px"></canvas>
   </div>
+  <button onclick="document.location='../../index.html'" class="button back-button">Back</button>
+
   <!--background-->
   <div class="container has-background-black">
     <div class="particles">
@@ -85,15 +72,9 @@
       <span style="--i:28"></span>
     </div>
   </div>
-  <footer>
-    <button onclick="document.location='./assets/html/chart.html'" class="my-moods">Mood Tracker</button>
-  </footer>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="../js/chart.js"></script>
 </body>
 
 </html>

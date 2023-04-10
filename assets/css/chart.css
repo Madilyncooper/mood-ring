@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  /*HEADER STYLES*/
+header {
+    margin: 0em 20em;
+    font-family: 'Open Sans', sans-serif;
+    color: aqua;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+    display: inline;
+  }
+  
+  header h1 {
+    letter-spacing: 25px;
+    color: white;
+  }
+  
+  header .header-title {
+    color: orange;
+  }
+  
+  header .header-n {
+    color: #d7054f;
+  }
+  
+  header .header-o-two {
+    color: #023cf8;
+  }
+  
+  header .title {
+    color: aqua;
+    font-size: 83px;
+  }
+
+  /* Mood Tracker h2 */
+  h2 {
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 7px;
+    background-color: inherit;
+    color: #485fc7;
+    border: none;
+    font-size: 27px;
+    margin-left: 38%;
+    margin-bottom: 50px;
+  }
+
+  /* background*/
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1d1b1ba6;
+    background-size: cover;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 0vh;
+  }
+  
+  .particles {
+    display: flex;
+    position: absolute;
+    z-index: 0;
+    padding: 0 20px;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .particles span {
+    position: relative;
+    z-index: 0;
+    bottom: 30px;
+    min-width: 30px;
+    height: 30px;
+    background: #1515cd;
+    box-shadow: 0 0 0 10px #e1064b,
+      0 0 50px #2bd2f7,
+      -100px 0 #e40606c5,
+      100px 0 #d27307bf;
+    margin: 0 4px;
+    border-radius: 60%;
+    animation: animate 15s ease infinite;
+    animation-duration: calc(400s / var(--i));
+  }
+  
+  .particles span:nth-child(even) {
+    background: #11a6f0;
+    box-shadow: 0 0 0 10px #d27307bf,
+      0 0 50px #d7054f,
+      -100px 0 #0cbde1f1,
+      100px 0 #2d3eff99;
+  }
+  
+  @keyframes animate {
+    35% {
+      transform: translateY(100vh) scale(1) rotate(0deg);
+    }
+  
+    20% {
+      transform: translateY(100vh) scale(3) rotate(0deg);
+    }
+  
+    100% {
+      transform: translateY(-50vh) scale(0.5) rotate(360deg);
+    }
+  }
+
+  /* Mood Chart */
+  #myChart {
+    margin-left: 23%;
+  }
+
+  /* "Back" button styling*/
+  .back-button {
+    background-color: inherit;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 7px;
+    color:#485fc7;
+    border: solid #485fc7;
+    border-radius: 11px;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  
+  .back-button:hover {
+    color: white;
+  }
+  
+  

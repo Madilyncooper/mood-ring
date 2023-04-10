@@ -10,11 +10,8 @@ let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
 var headerEl = document.querySelector('h1');
 var divHeaderEl = document.querySelector('div');
-
-
+var moodTrackerEl = document.querySelector('.my-moods');
 var colorHistory = JSON.parse(localStorage.getItem('Color')) || [];
-
-
 
 const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?category=funny';
 let button1 = () => {
@@ -34,9 +31,8 @@ let button1 = () => {
             quoteArr.push(quoteObj)
         });
 }
+
 button1();
-
-
 
 async function searchPhotos(query) {
     const data = await fetch(`https://api.pexels.com/v1/search?query=${query}`,
@@ -48,13 +44,10 @@ async function searchPhotos(query) {
             },
         });
     const response = await data.json();
-
     var photoList = response.photos;
     photoArr.push(photoList);
 
 };
-
-
 
 async function colorBtnClick(event) {
     event.preventDefault();
@@ -64,51 +57,43 @@ async function colorBtnClick(event) {
     if (event.target.textContent === 'Red') {
         await searchPhotos('red');
         grabPicture()
+        colorHistory.push(event.target.textContent);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
 
-        if (!colorHistory.includes(event.target.textContent)) {
-            colorHistory.push(event.target.textContent);
-            localStorage.setItem('Color', JSON.stringify(colorHistory));
-        }
     }
     else if (event.target.textContent === 'Green') {
         await searchPhotos('green');
         grabPicture()
-        if (!colorHistory.includes(event.target.textContent)) {
-            colorHistory.push(event.target.textContent);
-            localStorage.setItem('Color', JSON.stringify(colorHistory));
-        }
+        colorHistory.push(event.target.textContent);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
+
     }
     else if (event.target.textContent === 'Blue') {
         await searchPhotos('blue');
         grabPicture()
-        if (!colorHistory.includes(event.target.textContent)) {
-            colorHistory.push(event.target.textContent);
-            localStorage.setItem('Color', JSON.stringify(colorHistory));
-        }
+        colorHistory.push(event.target.textContent);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
+
     }
     else if (event.target.textContent === 'Orange') {
         await searchPhotos('orange');
         grabPicture()
-        if (!colorHistory.includes(event.target.textContent)) {
-            colorHistory.push(event.target.textContent);
-            localStorage.setItem('Color', JSON.stringify(colorHistory));
-        }
+        colorHistory.push(event.target.textContent);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
+
     }
     else if (event.target.textContent === 'Pink') {
         await searchPhotos('pink');
         grabPicture()
-        if (!colorHistory.includes(event.target.textContent)) {
-            colorHistory.push(event.target.textContent);
-            localStorage.setItem('Color', JSON.stringify(colorHistory));
-        }
+        colorHistory.push(event.target.textContent);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
+
     }
     else if (event.target.textContent === 'Yellow') {
         await searchPhotos('yellow');
         grabPicture()
-        if (!colorHistory.includes(event.target.textContent)) {
-            colorHistory.push(event.target.textContent);
-            localStorage.setItem('Color', JSON.stringify(colorHistory));
-        }
+        colorHistory.push(event.target.textContent);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else {
         return;
@@ -116,32 +101,41 @@ async function colorBtnClick(event) {
 }
 
 function grabPicture() {
+
     document.querySelector('section').innerHTML = '';
+    document.querySelector('footer').innerHTML = '';
+
     var quo = document.createElement('h3');
     quo.setAttribute('class', 'recent');
-    quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author;
-    quoteEl.appendChild(quo);
 
-    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)];
+    var authorNameEl = document.createElement('p');
+    authorNameEl.setAttribute('id', 'author-name');
+
+    for (var i = 0; i < photoArr.length; i++) {
+        var rand = photoArr[i][Math.floor(Math.random() * photoArr[i].length)];
+        quo.textContent = quoteArr[i].quote;
+        authorNameEl.textContent = `By ${quoteArr[i].author}`;
+    }
 
     var imgEl = document.createElement('img');
     imgEl.setAttribute('src', rand.src.original);
     imgEl.setAttribute('alt', rand.alt);
     imgEl.setAttribute('class', 'size');
-    quoteEl.appendChild(imgEl);
 
     var refresh = document.createElement('button');
-    refresh.textContent = 'Refresh';
-    refresh.classList.add('button', 'is-primary');
+    refresh.textContent = 'Back';
+    refresh.classList.add('button', 'back-button');
     refresh.addEventListener('click', refreshPage);
 
+    quo.appendChild(authorNameEl);
+    quo.appendChild(imgEl);
+    quoteEl.appendChild(quo);
     quoteEl.appendChild(refresh);
-
 }
 
-
-colorBtnEl.addEventListener('click', colorBtnClick)
+colorBtnEl.addEventListener('click', colorBtnClick);
 
 function refreshPage() {
     window.location.reload();
 } 
+
