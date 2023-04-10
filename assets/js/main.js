@@ -9,7 +9,7 @@ let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
 
-const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?';
+const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?category=funny';
 let button1 = () => {
     fetch(url, {
         method: 'GET',
@@ -41,11 +41,8 @@ async function searchPhotos(query) {
             },
         });
     const response = await data.json();
-    // console.log(response.photos);
 
     var photoList = response.photos;
-    //    displayImages(response) 
-    //Add in images
     photoArr.push(photoList);
 
 };
@@ -56,34 +53,51 @@ async function colorBtnClick(event) {
 
     event.preventDefault();
 
-    // console.log(event.target.textContent)
-    // if (!event.target.matches('.color-buttons')) {
-    //     return;
-    // }
+    var colorHistory = JSON.parse(localStorage.getItem('Color')) || [];
+    var colorArr = [];
+   
 
     if (event.target.textContent === 'Red') {
         await searchPhotos('red');
         grabPicture()
+        colorArr.push(event.target.textContent);
+        colorHistory.push(colorArr);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else if (event.target.textContent === 'Green') {
         await searchPhotos('green');
         grabPicture()
+        colorArr.push(event.target.textContent);
+        colorHistory.push(colorArr);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else if (event.target.textContent === 'Blue') {
         await searchPhotos('blue');
         grabPicture()
+        colorArr.push(event.target.textContent);
+        colorHistory.push(colorArr);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else if (event.target.textContent === 'Orange') {
         await searchPhotos('orange');
         grabPicture()
+        colorArr.push(event.target.textContent);
+        colorHistory.push(colorArr);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else if (event.target.textContent === 'Pink') {
         await searchPhotos('pink');
         grabPicture()
+        colorArr.push(event.target.textContent);
+        colorHistory.push(colorArr);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else if (event.target.textContent === 'Yellow') {
         await searchPhotos('yellow');
         grabPicture()
+        colorArr.push(event.target.textContent);
+        colorHistory.push(colorArr);
+        localStorage.setItem('Color', JSON.stringify(colorHistory));
     }
     else {
         return;

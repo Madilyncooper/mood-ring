@@ -243,14 +243,4 @@ li:nth-child(6) {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: bold;
-  /* margin: 10px 0 0 50px; */
-  margin-left: 250px;
-  white-space: nowrap;
-  /* overflow: hidden; */
-  width: 30em;
-  animation: type 4s steps(60, end); 
 }
-
-@keyframes type{ 
-  from { width: 0; } 
-} 
