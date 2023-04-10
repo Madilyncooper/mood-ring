@@ -8,8 +8,15 @@ var quoteArr = [];
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let colorBtn = document.getElementById('button1');
+var headerEl = document.querySelector('h1');
+var divHeaderEl = document.querySelector('div');
 
-const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?';
+
+var colorHistory = JSON.parse(localStorage.getItem('Color')) || [];
+
+
+
+const url = 'https://corsproxy.io/?https://api.api-ninjas.com/v1/quotes?category=funny';
 let button1 = () => {
     fetch(url, {
         method: 'GET',
@@ -41,11 +48,8 @@ async function searchPhotos(query) {
             },
         });
     const response = await data.json();
-    // console.log(response.photos);
 
     var photoList = response.photos;
-    //    displayImages(response) 
-    //Add in images
     photoArr.push(photoList);
 
 };
@@ -53,57 +57,78 @@ async function searchPhotos(query) {
 
 
 async function colorBtnClick(event) {
-
     event.preventDefault();
 
-    // console.log(event.target.textContent)
-    // if (!event.target.matches('.color-buttons')) {
-    //     return;
-    // }
+    var colorHistory = JSON.parse(localStorage.getItem('Color')) || [];
 
     if (event.target.textContent === 'Red') {
         await searchPhotos('red');
         grabPicture()
+
+        if (!colorHistory.includes(event.target.textContent)) {
+            colorHistory.push(event.target.textContent);
+            localStorage.setItem('Color', JSON.stringify(colorHistory));
+        }
     }
     else if (event.target.textContent === 'Green') {
         await searchPhotos('green');
         grabPicture()
+        if (!colorHistory.includes(event.target.textContent)) {
+            colorHistory.push(event.target.textContent);
+            localStorage.setItem('Color', JSON.stringify(colorHistory));
+        }
     }
     else if (event.target.textContent === 'Blue') {
         await searchPhotos('blue');
         grabPicture()
+        if (!colorHistory.includes(event.target.textContent)) {
+            colorHistory.push(event.target.textContent);
+            localStorage.setItem('Color', JSON.stringify(colorHistory));
+        }
     }
     else if (event.target.textContent === 'Orange') {
         await searchPhotos('orange');
         grabPicture()
+        if (!colorHistory.includes(event.target.textContent)) {
+            colorHistory.push(event.target.textContent);
+            localStorage.setItem('Color', JSON.stringify(colorHistory));
+        }
     }
     else if (event.target.textContent === 'Pink') {
         await searchPhotos('pink');
         grabPicture()
+        if (!colorHistory.includes(event.target.textContent)) {
+            colorHistory.push(event.target.textContent);
+            localStorage.setItem('Color', JSON.stringify(colorHistory));
+        }
     }
     else if (event.target.textContent === 'Yellow') {
         await searchPhotos('yellow');
         grabPicture()
+        if (!colorHistory.includes(event.target.textContent)) {
+            colorHistory.push(event.target.textContent);
+            localStorage.setItem('Color', JSON.stringify(colorHistory));
+        }
     }
     else {
         return;
     }
 }
 
-function grabPicture (){
-document.querySelector('section').innerHTML = ''
-var quo = document.createElement('h3')
-quo.setAttribute('class', 'recent')
-quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author
-quoteEl.appendChild(quo)
-   
-    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)]
+function grabPicture() {
+    document.querySelector('section').innerHTML = '';
+    var quo = document.createElement('h3');
+    quo.setAttribute('class', 'recent');
+    quo.textContent = quoteArr[0].quote + ' by ' + quoteArr[0].author;
+    quoteEl.appendChild(quo);
+
+    var rand = photoArr[0][Math.floor(Math.random() * photoArr[0].length)];
 
     var imgEl = document.createElement('img');
     imgEl.setAttribute('src', rand.src.original);
     imgEl.setAttribute('alt', rand.alt);
-    imgEl.setAttribute('class', 'size')
-    quoteEl.appendChild(imgEl)
+    imgEl.setAttribute('class', 'size');
+    quoteEl.appendChild(imgEl);
 
     var refresh = document.createElement('button');
     refresh.textContent = 'Refresh';
@@ -117,6 +142,6 @@ quoteEl.appendChild(quo)
 
 colorBtnEl.addEventListener('click', colorBtnClick)
 
-function refreshPage(){
+function refreshPage() {
     window.location.reload();
 } 
