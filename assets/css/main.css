@@ -64,7 +64,7 @@ header .title {
 
 /*BUTTON STYLES MOODRING*/
 
-.buttons {
+/* .buttons {
   margin: 1em auto;
   width: 50em;
   height: 50em;
@@ -81,7 +81,26 @@ header .title {
   flex-wrap: wrap;
   justify-content: center;
   position: relative; z-index: 1;
+} */
+
+.buttons {
+  margin: 1em auto;
+  height: 569px;
+  transition-duration: 1s;
+  width: 577px;
+  border-top: 30px solid orange;
+  border-right: 30px solid #1ead02;
+  border-bottom: 30px solid #e1064b;
+  border-left: 30px solid #023cf8;
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; z-index: 1;
 }
+
+
 
 
   /*BUTTON HOVER STYLES MOODRING*/
@@ -132,10 +151,21 @@ ul:hover {
   cursor: pointer;
   color: white;
 }
-#green, #red, #blue, #orange, #pink, #yellow {
+/* #green, #red, #blue, #orange, #pink, #yellow {
   border-radius: 75%;
   padding: 10px 50px 15px;
   font-size: 15px;
+  font-weight: bold;
+  display: inline;
+  overflow: hidden;
+  float: middle;
+} */
+
+#green, #red, #blue, #orange, #pink, #yellow {
+  border-radius: 75%;
+  padding: 30px 32px 30px;
+  font-size: 15px;
+  margin: -13px;
   font-weight: bold;
   display: inline;
   overflow: hidden;
@@ -253,4 +283,13 @@ li:nth-child(6) {
   font-weight: bold;
   word-spacing: 5px;
   letter-spacing: 5px;
+}
+
+
+/* "Back" button styling*/
+#back-button {
+  background-color: aqua;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: black;
 }

@@ -131,7 +131,8 @@ function grabPicture() {
     quoteEl.appendChild(imgEl);
 
     var refresh = document.createElement('button');
-    refresh.textContent = 'Refresh';
+    refresh.textContent = 'Back';
+    refresh.setAttribute('id', 'back-button')
     refresh.classList.add('button', 'is-primary');
     refresh.addEventListener('click', refreshPage);
 
