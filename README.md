@@ -4,7 +4,7 @@
 
 ## $\mathsf{\color{Orange}{Project\ Overview}}$
 
-We created an interactive application that includes two server-side APIs, a CSS framework, local storage, and a deployed link to GitHub Pages. In addition to receiving a fun quote and pictures correlated to the selected color, the application allows the user to navigate the application easily.
+An interactive application that includes server-side APIs, a CSS framework, local storage, and a deployed link to GitHub Pages. In addition to receiving a fun quote and pictures correlated to the selected color, the application allows the user to navigate the application easily.
 
 ## $\mathsf{\color{Olive}{Demo}}$
 
