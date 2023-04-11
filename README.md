@@ -33,3 +33,4 @@ This website is designed with the user in mind. We added links to fun quotes and
 * Yasmine Tsu
 * Lee DeBerry
 
+![Alt text](../../../../Downloads/Web%20capture_10-4-2023_17524_.jpeg)
