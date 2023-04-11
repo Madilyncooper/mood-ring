@@ -8,7 +8,7 @@ We created an interactive application that includes two server-side APIs, a CSS 
 
 ## $\mathsf{\color{Olive}{Demo}}$
 
-Live demo link here --->
+Live demo link here ---> https://madilyncooper.github.io/mood-ring/
 
 ## $\mathsf{\color{Green}{UX}}$
 
