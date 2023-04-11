@@ -8,7 +8,7 @@ An interactive application that includes server-side APIs, a CSS framework, loca
 
 ## $\mathsf{\color{Olive}{Demo}}$
 
-Live demo link here --->
+Live demo link here ---> https://madilyncooper.github.io/mood-ring/
 
 ## $\mathsf{\color{Green}{UX}}$
 
@@ -33,3 +33,4 @@ This website is designed with the user in mind. We added links to fun quotes and
 * Yasmine Tsu
 * Lee DeBerry
 
+![Alt text](../../../../Downloads/Web%20capture_10-4-2023_17524_.jpeg)
